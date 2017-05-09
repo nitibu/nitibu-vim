@@ -285,6 +285,8 @@ endif
 " Plugins settings and mappings
 " Edit them as you wish.
 
+" NerdCommenter ----------------------
+let g:NERDSpaceDelims=1
 " Tagbar ----------------------------- 
 
 " toggle tagbar display
