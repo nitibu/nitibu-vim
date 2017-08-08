@@ -30,8 +30,6 @@ Plugin 'gmarik/vundle'
 
 " Plugins from github repos:
 
-" Python and PHP Debugger
-Plugin 'fisadev/vim-debug.vim'
 " Better file browser
 Plugin 'scrooloose/nerdtree'
 " Code commenter
@@ -48,6 +46,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-fugitive'
 " Tab list panel
 Plugin 'kien/tabman.vim'
+" Jsbeautify
+Plugin 'maksimr/vim-jsbeautify'
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -167,6 +167,7 @@ set mouse=a
 set whichwrap+=<,>,h,l,[,]
 set background=dark
 set encoding=utf-8
+set backspace=indent,eol,start
 
 
 " tab length exceptions on some file types
@@ -312,7 +313,7 @@ map <F2> :TaskList<CR>
 " Vim-debug ------------------------------
 
 " disable default mappings, have a lot of conflicts with other plugins
-let g:vim_debug_disable_mappings = 1
+" let g:vim_debug_disable_mappings = 1
 " add some useful mappings
 " map <F5> :Dbg over<CR>
 " map <F6> :Dbg into<CR>
@@ -450,6 +451,15 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " mappings to toggle display, and to focus on it
 let g:tabman_toggle = 'tl'
 let g:tabman_focus  = 'tf'
+
+" Jsbeautify -----------------------------
+" map <c-f> :call JsBeautify()<cr>
+" or
+" autocmd FileType javascript noremap <buffer> <c-f> :call JsBeautify()<cr>
+" autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " Autoclose ------------------------------
 
