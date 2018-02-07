@@ -22,7 +22,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Plugins
-Plugin 'gmarik/vundle'
+" Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " ============================================================================
 " Active plugins
@@ -54,7 +55,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " Consoles as buffers
 Plugin 'rosenfeld/conque-term'
 " Pending tasks list
-Plugin 'fisadev/FixedTaskList.vim'
+" Plugin 'fisadev/FixedTaskList.vim'
 " Surround
 Plugin 'tpope/vim-surround'
 " Autoclose
@@ -63,7 +64,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and
 " operators, highlighting, run and ipdb breakpoints)
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 " Better autocompletion
 Plugin 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
@@ -76,7 +77,7 @@ Plugin 'tomasr/molokai'
 " Git/mercurial/others diff icons on the side of the file lines
 Plugin 'mhinz/vim-signify'
 " Automatically sort python imports
-Plugin 'fisadev/vim-isort'
+" Plugin 'fisadev/vim-isort'
 " Drag visual blocks arround
 Plugin 'fisadev/dragvisuals.vim'
 " Window chooser
