@@ -22,8 +22,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Plugins
-" Plugin 'gmarik/vundle'
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'gmarik/vundle'
 
 " ============================================================================
 " Active plugins
@@ -31,6 +30,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins from github repos:
 
+" Install YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
 " Better file browser
 Plugin 'scrooloose/nerdtree'
 " Code commenter
@@ -54,17 +55,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Consoles as buffers
 Plugin 'rosenfeld/conque-term'
-" Pending tasks list
-" Plugin 'fisadev/FixedTaskList.vim'
 " Surround
 Plugin 'tpope/vim-surround'
 " Autoclose
 Plugin 'Townk/vim-autoclose'
 " Indent text object
 Plugin 'michaeljsmith/vim-indent-object'
-" Python mode (indentation, doc, refactor, lints, code checking, motion and
-" operators, highlighting, run and ipdb breakpoints)
-" Plugin 'klen/python-mode'
 " Better autocompletion
 Plugin 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
@@ -76,8 +72,6 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'tomasr/molokai'
 " Git/mercurial/others diff icons on the side of the file lines
 Plugin 'mhinz/vim-signify'
-" Automatically sort python imports
-" Plugin 'fisadev/vim-isort'
 " Drag visual blocks arround
 Plugin 'fisadev/dragvisuals.vim'
 " Window chooser
@@ -86,13 +80,6 @@ Plugin 't9md/vim-choosewin'
 Plugin 'scrooloose/syntastic'
 " Paint css colors with the real color
 Plugin 'lilydjwg/colorizer'
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative 
-" numbering every time you go to normal mode. Author refuses to add a setting 
-" to avoid that)
-" Plugin 'myusuf3/numbers.vim'
-
 " javascript complete after install the plugin, you must cd the install
 " directory and run `npm install`, then add a .tern-project config file
 " the doc at http://ternjs.net/doc/manual.html#vim
@@ -114,9 +101,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tao12345666333/vim-vue'
 " True Sublime Text style multiple selections for Vim
 Plugin 'terryma/vim-multiple-cursors'
-
-" Plugins from vim-scripts repos:
-
 " Search results counter
 Plugin 'IndexedSearch'
 " XML/HTML tags navigation
@@ -306,11 +290,6 @@ nmap ,t :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
 
-" Tasklist ------------------------------
-
-" show pending tasks list
-map <F2> :TaskList<CR>
-
 " Vim-debug ------------------------------
 
 " disable default mappings, have a lot of conflicts with other plugins
@@ -386,22 +365,6 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
-
-" Python-mode ------------------------------
-
-" don't use linter, we use syntastic for that
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_signs = 0
-" don't fold python code on open
-let g:pymode_folding = 0
-" don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
-" open definitions on same window, and custom mappings for definitions and
-" occurrences
-let g:pymode_rope_goto_definition_bind = ',d'
-let g:pymode_rope_goto_definition_cmd = 'e'
-nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-nmap ,o :RopeFindOccurrences<CR>
 
 " NeoComplCache ------------------------------
 
@@ -574,5 +537,3 @@ let g:vim_markdown_frontmatter=1
 " via the command :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0
 
-" Pydiction
-let g:pydiction_location = '/home/nitb/.vim/bundle/Pydiction/complete-dict'
